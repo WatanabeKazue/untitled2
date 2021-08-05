@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,8 +22,33 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<int> _soundIds = [0,0,0,0,0,0];
   //late Soundpool _soundpool;
+  int number = 3;
 
   List<String> _texts = ["おめでとうございます","合格です","よくできました","残念でした","不合格です","頑張りましょう"];
+
+  @override
+  void initState() {
+    super.initState();
+    _initSounds();
+  print("initState終わったで～=buildメソッド回ったで～");
+  }
+ // }
+
+  //Future<void>
+
+
+ // _soundIds[0] = await loadSound("assets/sounds/sound1.mp3");
+  //_soundIds[1] = await loadSound("assets/sounds/sound1.mp3");
+ // _soundIds[2] = await loadSound("assets/sounds/sound1.mp3");
+//  _soundIds[3] = await loadSound("assets/sounds/sound1.mp3");
+ // _soundIds[4] = await loadSound("assets/sounds/sound1.mp3");
+ // _soundIds[5] = await loadSound("assets/sounds/sound1.mp3");
+
+  print("initState終わったで～=効果音ロードできたで～");
+  @override
+  void setState() {
+    super.setState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -84,8 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
         onPressed: null,
-        //TODO 引数として渡された文字をTextウィジェットで表示
-        child: Text(""),
+          child: Text(displayText),
       ),
     );
   }
